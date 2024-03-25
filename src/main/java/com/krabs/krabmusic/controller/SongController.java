@@ -52,7 +52,7 @@ public class SongController {
     }
 
     @GetMapping("/songs/name/{name}")
-    public List<Song> fetchSongByName(@PathVariable("name") String songName){//endpoint
+    public Song fetchSongByName(@PathVariable("name") String songName){//endpoint
         return songService.fetchSongByName(songName);
     }
 }

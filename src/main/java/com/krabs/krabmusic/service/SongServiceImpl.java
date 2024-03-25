@@ -75,7 +75,7 @@ public class SongServiceImpl implements SongService {
     }
 
     @Override
-    public List<Song> fetchSongByName(String songName) {
-        return songRepository.findAllBySongNameIgnoreCase(songName);
+    public Song fetchSongByName(String songName) {
+        return songRepository.findBySongNameIgnoreCase(songName);
     }
 }

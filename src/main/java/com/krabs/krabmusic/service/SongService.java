@@ -16,5 +16,5 @@ public interface SongService {
 
     public Song updateSong(Long songId, Song song);
 
-    List<Song> fetchSongByName(String songName);
+    public Song fetchSongByName(String songName);
 }

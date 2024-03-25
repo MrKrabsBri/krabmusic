@@ -16,6 +16,6 @@ public interface SongRepository extends JpaRepository<Song,Long> {
     // galima naudoti @Query(value = "cia rasosi query", nativeQuery = true) using native SQL query
     public Song findBySongName (String songName); //Spring Data JPA automatically generates query to retrieve data
     public Song findBySongNameIgnoreCase(String songName);
-    public List<Song> findAllBySongNameIgnoreCase(String songName);
+    public Song findAllBySongNameIgnoreCase(String songName);
 
 }

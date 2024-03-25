@@ -31,7 +31,7 @@ public class Song {
     @Length(max = 30, min = 5)
     //@Size(min = 1, max = 5) // more for playlists and albums (Array/List size)
     private String songName;
-    private int songLength;
+    private int songLength; //seconds
     private String songDescription;
     @Past
     private LocalDate songCreatedAt;
