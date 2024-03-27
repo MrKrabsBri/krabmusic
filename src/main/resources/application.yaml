@@ -1,0 +1,106 @@
+#"properties to yaml" google // use https://env.simplestep.ca/
+
+#spring:
+#  config:
+#   activate:
+#     on-profile: qa
+
+---
+
+#spring:
+#  profiles: dev
+#  application:
+#    name: krabmusic
+#    datasource:
+#      url: 'jdbc:mysql://localhost:3306/project2024'
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: 'Welcome, Mr. Krabs! This is KrabMusic'
+
+#---
+#
+#spring:
+#  profiles: qa
+#  application:
+#    name: krabmusic
+#    datasource:
+#      url: 'jdbc:mysql://localhost:3306/project2024-qa'
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: 'Welcome, Mr. Krabs! This is KrabMusic'
+#
+#---
+#
+#spring:
+#  profiles: prod
+#  application:
+#    name: krabmusic
+#    datasource:
+#      url: 'jdbc:mysql://localhost:3306/project2024-prod'
+#      username: root
+#      password: root
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#welcome:
+#  message: 'Welcome, Mr. Krabs! This is KrabMusic'
+
+spring:
+  application:
+    name: krabmusic
+  profiles:
+    active: dev
+
+server:
+  port: '8082'
+
+---
+# dev config
+spring:
+  config:
+    active:
+      on-profile: dev
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/project2024'
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+welcome:
+  message: 'Welcome, Mr. Krabs! This is dev environment!'
+
+---
+# prod config
+  spring:
+    config:
+      active:
+        on-profile: prod
+    datasource:
+      url: 'jdbc:mysql://localhost:3306/project2024_prod'
+      username: root
+      password: root
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+      show-sql: true
+  welcome:
+    message: 'Welcome, Mr. Krabs! This is prod environment!'
+
