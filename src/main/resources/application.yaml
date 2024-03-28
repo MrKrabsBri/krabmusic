@@ -4,7 +4,7 @@ server:
   port: 8082
 spring:
   profiles:
-    active: prod
+    active: dev
 
 ---
 # dev config
@@ -25,6 +25,14 @@ spring:
     show-sql: true
 welcome:
   message: 'Welcome, Mr. Krabs! This is dev environment!'
+
+#Exposing all of the endpoints of actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
 
 ---
 
