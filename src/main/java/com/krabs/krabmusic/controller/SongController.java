@@ -23,6 +23,7 @@ public class SongController {
     public Song saveSongs(@Valid @RequestBody Song song){
         //kad ir koki JSON gausim, ji turi convertinti i Song object (del @RequestBody)
         //SongService service = new SongServiceImpl(); cia jeigu manually
+        //
         LOGGER.info("Inside saveSongs of SongController");
         return songService.saveSong(song);
     }
