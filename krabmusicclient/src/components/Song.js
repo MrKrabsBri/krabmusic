@@ -3,8 +3,11 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
-import {useState }from 'react';
+import {useState } from 'react';
 import Button from '@mui/material/Button';
+
+
+import DatePicker from '@mui/lab/DatePicker';
 
 export default function Song() {
 
@@ -12,7 +15,7 @@ export default function Song() {
     const [songName,setSongName] = useState('Krab')
     const [songLength,setSongLength] = useState('')
     const [songDescription,setSongDescription] = useState('')
-    const [songCreatedAt, setSongCreatedAt] = useState('')
+    const [songCreatedAt, setSongCreatedAt] = useState(null)
 
     const handleClick = (e)=>{
     e.preventDefault()
@@ -56,10 +59,16 @@ export default function Song() {
                     onChange={(e)=>setSongDescription(e.target.value)}
                     />
 
-                    <TextField id="outlined-basic" label="Song Creation Date" variant="outlined" fullWidth
-                    value = {songCreatedAt}
-                    onChange={(e)=>setSongCreatedAt(e.target.value)}
-                    />
+
+                       <DatePicker
+                         label="Song Creation Date"
+                         value={songCreatedAt}
+                         onChange={(newValue) => {
+                           setSongCreatedAt(newValue);
+                         }}
+                         renderInput={(params) => <TextField {...params} variant="outlined" fullWidth />}
+                       />
+
 
                     <Button variant="contained" color= "secondary" onClick={handleClick}>
                     Submit
