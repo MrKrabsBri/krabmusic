@@ -10,11 +10,13 @@ export default function Song() {
 
     const paperStyle = {padding: '50px 20px', width:600, margin: "20px auto"}
     const [songName,setSongName] = useState('Krab')
-    const [songDescription,setSongDescription]=useState('')
+    const [songLength,setSongLength] = useState('')
+    const [songDescription,setSongDescription] = useState('')
+    const [songCreatedAt, setSongCreatedAt] = useState('')
 
     const handleClick = (e)=>{
     e.preventDefault()
-    const song={songName,songDescription}
+    const song={songName,songLength,songDescription, songCreatedAt}
     console.log(song)
     fetch("http://localhost:8082/songs",{
     method:"POST",
@@ -39,17 +41,29 @@ export default function Song() {
                 <h1 style={{color:"green"}}>  <u>Add Song</u>  </h1>
 
 
-                         <TextField id="outlined-basic" label="Song Name" variant="outlined" fullWidth
-                         value = {songName}
-                         onChange={(e)=>setSongName(e.target.value)}
-                         />
-                         <TextField id="outlined-basic" label="Song Description" variant="outlined" fullWidth
-                         value = {songDescription}
-                         onChange={(e)=>setSongDescription(e.target.value)}
-                         />
-                         <Button variant="contained" color= "secondary" onClick={handleClick}>
-                            Submit
-                         </Button>
+                    <TextField id="outlined-basic" label="Song Name" variant="outlined" fullWidth
+                    value = {songName}
+                    onChange={(e)=>setSongName(e.target.value)}
+                    />
+
+                    <TextField id="outlined-basic" label="Song Length" variant="outlined" fullWidth
+                    value = {songLength}
+                    onChange={(e)=>setSongLength(e.target.value)}
+                    />
+
+                    <TextField id="outlined-basic" label="Song Description" variant="outlined" fullWidth
+                    value = {songDescription}
+                    onChange={(e)=>setSongDescription(e.target.value)}
+                    />
+
+                    <TextField id="outlined-basic" label="Song Creation Date" variant="outlined" fullWidth
+                    value = {songCreatedAt}
+                    onChange={(e)=>setSongCreatedAt(e.target.value)}
+                    />
+
+                    <Button variant="contained" color= "secondary" onClick={handleClick}>
+                    Submit
+                    </Button>
 
         </Paper>
     </Container>

@@ -7,7 +7,6 @@
     <list default="true" id="93a3fb6a-0ce4-4cda-aaed-7534c3c19c6c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Song.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Song.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../krabmusicserver/src/main/java/com/krabs/krabmusic/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../krabmusicserver/src/main/java/com/krabs/krabmusic/controller/SongController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
