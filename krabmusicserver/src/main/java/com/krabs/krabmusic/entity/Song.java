@@ -34,7 +34,7 @@ public class Song {
     private int songLength; //seconds
     private String songDescription;
     @Past
-    private LocalDate songCreatedAt;
+    private LocalDate songCreatedAt; // use UTC timezone
 
     //Naudojant Lombok, nereikes konstruktoriu, getters ir setters.
     /*
